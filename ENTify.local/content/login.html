@@ -1,0 +1,70 @@
+<?php
+
+?>
+
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="login_styles.css">
+</head>
+<body>
+    <!-- Top-menu -->
+    <div class="top-menu">
+        <div class="Logo">
+            <a href="index.html.php">
+                <img src="photos/Logo.png" alt="Логотип">
+            </a>
+        </div>
+        <div class="nav-links">
+            <a href="index.html.php">Главная</a>
+            <a href="exams.html.php">Экзамены</a>
+            <a href="contact.html.php">О Нас</a>
+        </div>
+        <div class="auth-button">
+            <a href="login.html" class="cta-button">Войти</a>
+        </div>
+    </div>
+
+    <!-- Main content -->
+    <main class="login-container">
+        <div class="login-box">
+            <h1>Вход</h1>
+            <div class="logo-container">
+                <img src="" alt="Логотип" class="logo">
+            </div>
+            <form action="/checklogin.php" method="POST" id="myForm">
+                <div class="input-group">
+                    <input type="text" placeholder="Логин" name="login" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" placeholder="Пароль" name="password" required>
+                </div>
+                <button type="submit" class="cta-button">Войти</button>
+            </form>
+            <p class="register-text">
+                Нету еще аккаунта на нашем сайте? 
+                <a href="reg.html" class="register-link">Регистрация</a>
+            </p>
+        </div>
+    </main>
+    <script>
+        function handleFormSubmit(event) {
+            event.preventDefault(); // Отменяет стандартную отправку формы
+        
+            // Выполняем первое действие
+            console.log('Первое действие выполнено');
+        
+            // Выполняем второе действие
+            console.log('Второе действие выполнено');
+        
+            // Теперь отправим форму на сервер
+            document.getElementById('myForm').action = '/test.php';
+            document.getElementById('myForm').submit();
+        }
+        </script>
+</body>
+</html>

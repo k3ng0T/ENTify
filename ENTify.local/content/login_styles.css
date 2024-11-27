@@ -1,0 +1,206 @@
+/* Контейнер страницы с фиксированным фоном */
+.login-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: url('your-background.jpg') no-repeat center center fixed; /* Замените на путь к вашему изображению */
+    background-size: cover;
+}
+
+/* Блок формы */
+.login-box {
+    width: 400px;
+    padding: 30px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Заголовок */
+.login-box h1 {
+    font-family: 'Montserrat', sans-serif;
+    color: #5f2a5f;
+    margin-bottom: 10px;
+}
+
+/* Логотип */
+.logo-container {
+    height: 100px; /* Фиксированная высота для логотипа */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    max-height: 100%; /* Логотип вписывается в блок */
+    max-width: 100%; /* Логотип не выходит за пределы контейнера */
+}
+
+/* Поля ввода */
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: #5f2a5f;
+    outline: none;
+}
+.input-group label {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #5f2a5f;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.input-group input[type="date"]:focus {
+    border-color: #5f2a5f;
+    outline: none;
+}
+
+/* Кнопка входа */
+.cta-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #5f2a5f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+    background-color: #732b73;
+    transform: scale(1.02);
+}
+
+/* Текст под кнопкой */
+.register-text {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Ссылка регистрации */
+.register-link {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.register-link:hover {
+    color: #1e70a6;
+    text-decoration: underline;
+}
+
+
+
+/* Top-menu */
+body .top-menu {
+    position: fixed !important;
+    background-color: #5f2a5f !important;
+    color: white !important;
+    display: flex !important;
+    justify-content: start !important; /* Все элементы прижаты к началу */
+    align-items: center !important;
+    padding: 10px 20px !important;
+    gap: 10px; /* Расстояние между элементами */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+    transform: none !important; /* Убираем любые трансформации */
+    transition: none !important; /* Убираем все анимации */
+}
+
+/* Логотип */
+body .top-menu .Logo {
+    margin-right: 10px; /* Свободное место после логотипа */
+}
+
+body .top-menu .Logo img {
+    display: inline-block !important;
+    width: 150px !important;
+    height: auto !important;
+}
+
+/* Ссылки в меню */
+body .top-menu .nav-links {
+    display: flex;
+    gap: 10px; /* Свободное место между ссылками */
+}
+
+body .top-menu .nav-links a {
+    color: white !important;
+    text-decoration: none !important;
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 14px !important;
+    position: relative; /* Для анимации подчеркивания */
+    transition: color 0.3s ease, background-size 0.3s ease; /* Плавные переходы */
+}
+
+body .top-menu .nav-links a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-image:   linear-gradient(to right, #ffff, rgb(255, 0, 255));;
+    transition: width 0.3s ease;
+}
+
+
+body .top-menu .nav-links a:hover::after {
+    width: 100%; /* Подчеркивание при наведении */
+}
+
+/* Кнопка Войти */
+body .top-menu .auth-button {
+    margin-left: auto !important; /* Отправляем кнопку вправо */
+}
+
+body .top-menu .auth-button .cta-button {
+    background-color: #ff0066 !important;
+    color: white !important;
+    text-decoration: none !important;
+    padding: 10px 20px !important;
+    border-radius: 5px !important;
+    transition: background-color 0.3s !important;
+}
+
+body .top-menu .auth-button .cta-button:hover {
+    background-color: #cc0052 !important;
+}
+
+/* Убираем эффекты видимости */
+body .top-menu.visible {
+    transform: none !important;
+    transition: none !important;
+}
+
+body .top-menu:hover {
+    transform: none !important;
+    transition: none !important;
+}

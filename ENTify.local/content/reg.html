@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="login_styles.css"> <!-- Используем стили для страницы входа -->
+</head>
+<body>
+    <!-- Top-menu -->
+    <div class="top-menu">
+        <div class="Logo">
+            <a href="index.html.php">
+                <img src="photos/Logo.png" alt="Логотип">
+            </a>
+        </div>
+        <div class="nav-links">
+            <a href="index.html.php">Главная</a>
+            <a href="exams.html.php">Экзамены</a>
+            <a href="contact.html.php">О Нас</a>
+        </div>
+        <div class="auth-button">
+            <a href="login.html" class="cta-button">Войти</a>
+        </div>
+    </div>>
+
+    <!-- Main content -->
+    <main class="login-container">
+        <div class="login-box">
+            <h1>Регистрация</h1>
+            <div class="logo-container">
+                <img src="" alt="Логотип" class="logo">
+            </div>
+            <form action="register.php" method="post">
+                <div class="input-group">
+                    <input type="text" placeholder="Имя" name="first-name" required>
+                </div>
+                <div class="input-group">
+                    <input type="text" placeholder="Фамилия" name="last-name" required>
+                </div>
+                <div class="input-group">
+                    <input type="text" placeholder="Логин" name="username" required>
+                </div>
+                <div class="input-group">
+                    <input type="email" placeholder="Email" name="email" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" placeholder="Пароль" name="password" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" placeholder="Повтор Пароля" name="repeat-password" required>
+                </div>
+                <div class="input-group">
+                    <input type="date" id="birthdate" name="birthdate" placeholder="Дата Рождения" required>
+                </div>
+                
+                <button type="submit" class="cta-button">Зарегистрироваться</button>
+            </form>
+            <p class="register-text">
+                Уже есть аккаунт? 
+                <a href="login.html" class="register-link">Войти</a>
+            </p>
+        </div>
+    </main>
+</body>
+</html>

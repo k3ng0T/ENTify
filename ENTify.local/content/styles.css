@@ -1,0 +1,875 @@
+/* styles.css */
+main{
+    padding-top: 20px;
+    background-color: white;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f9f9f9;
+    color: #333;
+}
+hr{
+    margin: 0;
+    padding: 0;
+}
+/* Хедер */
+header {
+    position: relative;
+    width: 100%;
+    background-color: #5f2a5f; /* Фон для верхнего блока */
+}
+
+/* Верхнее меню */
+/* Скрытое состояние */
+.top-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #5f2a5f;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+
+/* Показ */
+.top-menu.visible {
+    transform: translateY(0);
+}
+
+/* Эффект при наведении */
+.top-menu:hover {
+    transform: translateY(0) !important;
+}
+
+
+/* Логотип */
+.Logo img {
+    display: inline-block;
+    width: 150px;
+    height: auto;
+}
+
+/* Фото в хедере */
+.Headr_photo {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    z-index: 1; /* Фото ниже других элементов */
+}
+
+.Headr_photo .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный слой */
+    z-index: 1;
+}
+.Headr_photo img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+.cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 2;
+}
+
+.cta h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.cta p {
+    font-family: 'Benzin', sans-serif;
+    font-size: 18px;
+    margin-bottom: 30px;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+.cta-button {
+    font-family: 'Benzin';
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #ff0066;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #cc0052;
+}
+
+#profile-btn a{
+    text-decoration: none;
+    color: white;
+}
+
+.nav-links a {
+    font-size: 14px;
+    font-family: 'Montserrat',sans-serif;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-position: center;
+    color: white;
+    text-decoration: none;
+    background-image:  linear-gradient(to right, #ffff, rgb(255, 0, 255)); /* Параметры градиента */
+    background-repeat: no-repeat; /* Фон не повторяется */
+    background-size: 0px 0px; /* Линия будет шириной 10px и высотой 2px */
+    background-position: left bottom; /* Положение в левом нижнем углу */
+    padding-bottom: 2px; /* Расстояние от текста до линии */
+    text-decoration: none; /* Убираем подчёркивание */
+    transition: 0.5s; 
+}
+.top-menu {
+    gap: 20px;
+    display: flex;
+    justify-content: start; /* Разделение логотипа, ссылок и кнопки */
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #5f2a5f; /* Цвет фона */
+}
+.nav-links {
+    display: flex;
+    flex-direction: column; /* Кнопки в столбик */
+    gap: 10px; /* Расстояние между кнопками */
+}
+
+.auth-button {
+    left: 90%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+}
+
+.auth-button .cta-button {
+    font-size: 14px;
+    font-family: 'Benzin';
+    background-color: #ff0066;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.auth-button .cta-button:hover {
+    background-color: #cc0052;
+}
+
+.Logo img{
+    width: 150px;
+    height: auto;
+}
+
+
+
+
+
+/*МЕЙН ЧАСТЬ*/
+/* === Общий стиль для abs-c1 и abs-c3 === */
+.abs-container.abs-c3 {
+    gap: 10px; /* Уменьшаем отступ */
+}
+.abs-container.abs-c3 img{
+    max-width: 200%;
+}
+.abs-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+    margin: 20px auto;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень */
+    border-radius: 10px;
+    max-width: 1200px;
+    gap: 20px; /* Отступ между текстом и изображением */
+}
+
+.abs-container img {
+    max-width: 40%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Тень для изображения */
+}
+
+.abs-content {
+    max-width: 600px;
+    text-align: left;
+}
+.abs-content a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.abs-content h1 {
+    font-family: 'Benzin';
+    color: #5f2a5f;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.abs-content p {
+    font-family: 'Roboto';
+    padding: 15px;
+    background-color: #5f2a5f;
+    border-top: 2px;
+    border-radius: 20px;
+    color: #ffffff;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* === Кнопки, похожие на хедер === */
+.abs-content .cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #ff0066;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+}
+
+.abs-content .cta-button:hover {
+    background-color: #cc0052;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* === Отзеркаливание для abs-c3 === */
+.abs-c3 {
+    flex-direction: row-reverse; /* Разворачиваем порядок: текст слева, картинка справа */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 40px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень для контейнера */
+    border-radius: 10px;
+}
+
+/* === Стиль для изображения в abs-c1 === */
+
+.abs-c3 img {
+    padding: 0;
+    margin: 0;
+    width: 40%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* === Анимация для тени и наклона картинки === */
+.abs-c3 img:hover {
+    transform: scale(1.05) rotate(5deg); /* Увеличение и легкий наклон */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Увеличенная тень при наведении */
+}
+
+/* === Дополнительная анимация для контейнера === */
+.abs-c3 {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* === Добавление анимации для тени контейнера === */
+.abs-c3:hover {
+    transform: translateY(-10px); /* Поднимем контейнер при наведении */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Увеличение тени для контейнера */
+}
+
+/* === Общий стиль для контейнера abs-c1 === */
+.abs-c1 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень для контейнера */
+    border-radius: 10px;
+}
+
+/* === Стиль для изображения в abs-c1 === */
+.abs-c1 img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* === Анимация для тени и наклона картинки === */
+.abs-c1 img:hover {
+    transform: scale(1.05) rotate(5deg); /* Увеличение и легкий наклон */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Увеличенная тень при наведении */
+}
+
+/* === Дополнительная анимация для контейнера === */
+.abs-c1 {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* === Добавление анимации для тени контейнера === */
+.abs-c1:hover {
+    transform: translateY(-10px); /* Поднимем контейнер при наведении */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Увеличение тени для контейнера */
+}
+.abs-c1 .cta-button{
+    margin-left: 250px;
+}
+
+
+
+
+
+
+
+
+.AboutUs-2{
+    justify-content: space-around;
+    margin-bottom: 30px;
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    margin-right: 20px;
+    width: 1413px;
+    display:flex;
+    padding: 50px;
+    background-color: #5f2a5f;
+}
+.cb2_1{
+    position: relative;
+    background-color: white;
+    border-radius: 15%;
+    border-width: 2px;
+    border-style:solid;
+    padding: 20px;
+    display: inline-block;
+}
+.cb2_1 h1{
+    color: #5f2a5f;
+    text-align: center;
+}
+.cb2_1 p{
+    color: black;
+    text-align: left;
+}
+.cb2_2{
+    background-color: white;
+    position: relative;
+    border-radius: 15%;
+    border-width: 2px;
+    border-style:solid;
+    padding: 20px;
+    display: inline-block;
+}
+.cb2_2 h1{
+    color: #5f2a5f;
+    text-align: center;
+}
+.cb2_2 p{
+    color:rgb(0, 0, 0);
+    text-align: left;
+}
+.cb2_3{
+    background-color: white;
+    position: relative;
+    border-radius: 15%;
+    border-width: 2px;
+    border-style:solid;
+    padding: 20px;
+    display: inline-block;
+}
+.cb2_3 h1{
+    color: #5f2a5f; 
+    text-align: center;
+}
+.cb2_3 p{
+    color: rgb(0, 0, 0);
+    text-align: left;
+}
+
+
+
+
+
+
+
+
+
+
+/*index.html*/
+/* === Общий стиль для секции man9sua === */
+.man9sua {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around; /* Контент слева, логотип справа */
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.7);
+    min-height: 100vh; /* Секция растягивается на весь экран */
+    overflow: hidden;
+    width: 100%; /* Полная ширина экрана */
+}
+
+.man9sua img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Масштабируем фоновое изображение */
+    z-index: 1; /* Под контентом */
+}
+
+.man9sua .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Оверлей */
+    z-index: 2;
+}
+
+/* === Контент секции === */
+.man9sua_content {
+    position: relative;
+    z-index: 3; /* Поверх фона и оверлея */
+    text-align: left;
+    color: white;
+    max-width: 60%; /* Ограничиваем ширину контента */
+    margin-left: 25%; /* Отступ от левого края, чтобы сделать место для логотипа */
+    flex-grow: 1; /* Дает больше пространства для контента */
+    padding: 20px;
+}
+
+.man9sua_title {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.man9sua_text {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+/* === Кнопка в секции === */
+.mans9ua_btn a {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #ff0066;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: all 0.3s ease-in-out;
+}
+
+.mans9ua_btn a:hover {
+    background-color: #cc0052;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* === Логотип Telegram (фиксированно слева) === */
+.TgLogo{
+    position: relative;
+    display: inline-block;
+    width: 20%;
+    height: 20%;
+    z-index: 4;
+}
+.TgLogo:hover {
+    transform: scale(1.1); /* Увеличение при наведении */
+}
+
+
+
+
+a{
+    color: white;
+    text-decoration: none;
+    
+}
+
+
+.mcb1_11gr{ margin-top: 10px;
+    margin-bottom: 40px;
+    justify-content: space-around;
+}
+.mcb1_12023{
+    left: 8%;
+    margin-right: 50px;
+    display: inline-block;
+    position: relative;
+    margin-left: 0px;
+    padding: 15px 20px; 
+    font-family: 'Benzin';
+    text-decoration: none;
+    font-size: 25px;
+    background-color: #5f2a5f;
+    border-radius: 15%;
+    border-width: 2px;
+    color:#ffffff;
+}
+.mcb1_12023 a{
+    text-decoration: none;
+    color:rgb(255, 255, 255);
+}
+
+.mcb1_22023{
+    left: 8%;
+    margin-right: 50px;
+    display: inline-block;
+    position: relative;
+    margin-left: 0px;
+    padding: 15px 20px; 
+    font-family: 'Benzin';
+    text-decoration: none;
+    font-size: 25px;
+    background-color: #5f2a5f;
+    border-radius: 15%;
+    border-width: 2px;
+    color:white;
+}
+.mcb1_22023 a{
+    text-decoration: none;
+    color:white;
+}
+
+.mcb1_32023{
+    left: 8%;
+    margin-right: 50px;
+    display: inline-block;
+    position: relative;
+    margin-left: 0px;
+    padding: 15px 20px; 
+    font-family: 'Benzin';
+    text-decoration: none;
+    font-size: 25px;
+    background-color: #5f2a5f;
+    border-radius: 15%;
+    border-width: 2px;
+    color:white;
+}
+.mcb1_32023 a{
+    text-decoration: none;
+    color:white;
+}
+
+.mcb1_42023{
+    left: 8%;
+    margin-right: 50px;
+    display: inline-block;
+    position: relative;
+    margin-left: 0px;
+    padding: 15px 20px; 
+    font-family: 'Benzin';
+    text-decoration: none;
+    font-size: 25px;
+    background-color: #5f2a5f;
+    border-radius: 15%;
+    border-width: 2px;
+    color:white;
+}
+.mcb1_42023 a{
+    text-decoration: none;
+    color:white;
+}
+
+.mcb2_10gr{ margin-top: 10px;
+    margin-bottom: 40px;
+    justify-content: space-around;
+}
+
+.mcb2_12023{
+    left: 8%;
+    margin-right: 50px;
+    display: inline-block;
+    position: relative;
+    margin-left: 0px;
+    padding: 15px 20px; 
+    font-family: 'Benzin';
+    text-decoration: none;
+    font-size: 25px;
+    background-color: #ffffff;
+    border-radius: 15%;
+    border-width: 2px;
+    color:#000000;
+}
+.mcb2_12023 a{
+    text-decoration: none;
+    color:rgb(0, 0, 0);
+}
+
+.mcb2_22023{
+    left: 8%;
+    margin-right: 50px;
+    display: inline-block;
+    position: relative;
+    margin-left: 0px;
+    padding: 15px 20px; 
+    font-family: 'Benzin';
+    text-decoration: none;
+    font-size: 25px;
+    background-color: white;
+    border-radius: 15%;
+    border-width: 2px;
+    color:rgb(0, 0, 0);
+}
+.mcb2_22023 a{
+    text-decoration: none;
+    color:rgb(0, 0, 0);
+}
+
+.mcb2_32023{
+    left: 8%;
+    margin-right: 50px;
+    display: inline-block;
+    position: relative;
+    margin-left: 0px;
+    padding: 15px 20px; 
+    font-family: 'Benzin';
+    text-decoration: none;
+    font-size: 25px;
+    background-color: white;
+    border-radius: 15%;
+    border-width: 2px;
+    color:rgb(0, 0, 0);
+}
+.mcb2_32023 a{
+    text-decoration: none;
+    color:rgb(0, 0, 0);
+}
+
+.mcb2_42023{
+    left: 8%;
+    margin-right: 50px;
+    display: inline-block;
+    position: relative;
+    margin-left: 0px;
+    padding: 15px 20px; 
+    font-family: 'Benzin';
+    text-decoration: none;
+    font-size: 25px;
+    background-color: #ffffff;
+    border-radius: 15%;
+    border-width: 2px;
+    color:rgb(0, 0, 0);
+}
+.mcb2_42023 a{
+    text-decoration: none;
+    color:rgb(0, 0, 0);
+}
+
+
+
+.ex_10gr{
+    display: inline-block;
+    position: relative;
+    justify-content: space-between;
+    color: black;
+}
+.ex24-25_10{
+    text-decoration: none;
+}
+.ex24-25_10 h1{
+    font-family: 'Roboto';
+    font-size: 20px;
+}
+.ex24-25_10 a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+.ex24-25_10 h2{
+    font-family: 'Benzin';
+    margin-left: 10px;
+    color: #000000;
+}
+.ex24-10{
+    justify-content: space-between;
+    display: inline-block;
+    font-family: 'Monserrat';
+    text-align: center;
+    margin-left: 50px;
+    padding: 7px;
+    background-color: #5f2a5f;
+    border-color: black;
+    border-radius: 5px;
+    border-width: 2px;
+}
+
+
+/*НИЖНАЯ ЧАСТЬ*/
+footer {
+    justify-content: space-between;
+    font-family: 'Benzin';
+    background: #5f2a5f;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+
+}
+footer p{
+    color:#ffff;
+}
+.number{
+    text-align: left;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+}
+.adr p{
+    color:rgb(149, 149, 149);
+}
+.adr p{
+    margin-left: 40px;
+    margin-bottom: 2px;
+}
+.adr ul{
+    margin-top: -3px;
+}
+.adr li{
+    text-decoration: none;
+    color: rgb(149, 149, 149) ;
+
+}
+.adr a{
+    text-decoration: none;
+    color:rgb(149, 149, 149);
+}
+.adress{
+    text-align: left;
+    text-decoration: none;
+    position:relative;
+    display: inline-block;
+}
+.socialMedia{
+    text-align: left;
+    text-decoration: none;
+    position:relative;
+    display: inline-block;
+}
+
+/*ШРИФТЫ*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@font-face {
+    font-family: 'Benzin';
+    src: local('Benzin Regular'), local('Benzin-Regular'),
+        url('Benzin-Regular.woff2') format('woff2'),
+        url('Benzin-Regular.woff') format('woff'),
+        url('Benzin-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Benzin';
+    src: local('Benzin Bold'), local('Benzin-Bold'),
+        url('Benzin-Bold.woff2') format('woff2'),
+        url('Benzin-Bold.woff') format('woff'),
+        url('Benzin-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+  }
+
+
+.cb2_title{
+    color: #5f2a5f;
+    font-family: 'Montserrat';
+}
+.cb2_text{
+    font-family: 'Roboto';
+}
+.btn2{
+    font-family: 'Benzin';
+}
+
+
+.exs{
+    font-family: 'Montserrat';
+}
+.exs ul,li{
+    list-style: none;
+    text-decoration: none;
+    color: black;
+}
+.correctAns{
+    border-color: greenyellow;
+    border-width: 2px;
+}
+
+
+.container {
+    width: 50px;
+  }
+
+
+  .toggle-header {
+    width: 300px;
+    background-color: #3498db;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .toggle-content {
+    max-height: 0;
+    overflow: hidden;
+    background-color: #ecf0f1;
+    transition: max-height 0.5s ease, padding 0.5s ease;
+    border-radius: 0 0 8px 8px;
+  }
+
+  .toggle-content.open {
+    max-height: 100%; /* Высота содержимого */
+    padding: 15px;
+  }
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+

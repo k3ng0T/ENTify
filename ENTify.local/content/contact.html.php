@@ -10,8 +10,8 @@ error_reporting(E_ALL & ~E_NOTICE & ~E_WARNING);
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Страница экзаменов</title>
-        <link rel="stylesheet" href="styles.css">
-        <link rel="stylesheet" href="animations.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="animation.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -60,7 +60,7 @@ error_reporting(E_ALL & ~E_NOTICE & ~E_WARNING);
     <main>
         <content>
             <div class="abs-container abs-c1">
-                <div class="abs-content">
+                <div class="abs-content backcolor">
                     <div class="abs-text">
                         <h1 class="animIt">Добро пожаловать<br> в мир ПҚС!</h1>
                         <p class="animIt Shadsw">
@@ -106,7 +106,7 @@ error_reporting(E_ALL & ~E_NOTICE & ~E_WARNING);
                 </div>
             </div>
             <div class="abs-container abs-c3">
-                <div class="abs-content">
+                <div class="abs-content backcolor">
                     <div class="abs-text">
                         <h1 class="animIt">Почему выбирают нас?</h1>
                         <p class="animIt Shadsw"> Мы предлагаем уникальные материалы, актуальные разборы<br> 

@@ -37,7 +37,7 @@ if($pass != $repeatpass){
     $dateinsert = "INSERT INTO `user` (logon,pass,email,realname,surname,birthdate,Admin) VALUES ('$username','$hashedPassword','$email','$firstname','$surname','$birthdate','$isAdmin')";
 
     $conn -> query($dateinsert);
-    header("Location: index.html.php"); // Замените ссылку на ваш сайт или нужную страницу
+    header("Location: index.php"); // Замените ссылку на ваш сайт или нужную страницу
     exit();
 }
 

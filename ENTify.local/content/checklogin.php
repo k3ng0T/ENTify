@@ -8,8 +8,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $login = $_POST['login'];
     $pass = $_POST['password'];
 
-    $query = "SELECT pass, realname FROM `user` WHERE logon = ?";
-    $stmt = $conn->prepare($query);
+    $quer = "SELECT pass, realname, logon, image, surname, birthdate FROM `user` WHERE logon = ?";
+    $stmt = $conn->prepare($quer);
     if (!$stmt) {
         die("Ошибка SQL: " . $conn->error);
     }
@@ -28,11 +28,20 @@ if (isset($_COOKIE['loged']) && $_COOKIE['loged'] === 'true') {
         if (password_verify($pass, $user['pass'])) {
             // Успешная авторизация, устанавливаем куки
             setcookie("loged", "true", time() + 3600, "/");
-            setcookie("user", $user['realname'], time() + 3600, "/"); // Здесь сохраняем имя пользователя (realname) в куки
+            setcookie("user", $user['realname'], time() + 3600, "/");
+            setcookie("username", $user['logon'], time() + 3600, "/");
+            setcookie("lastname", $user['surname'], time() + 3600, "/");
+            setcookie("birth", $user['birthdate'], time() + 3600, "/"); // Здесь сохраняем имя пользователя (realname) в куки
 
             // Перенаправляем пользователя на главную страницу
             header("Location: index.php?loged");
-            exit;
+            if($user['Admin'] == '1'){
+                setcookie("admin", "true", time() + 3600, "/");
+            }else{
+                setcookie("admin", "false", time() + 3600, "/");
+                exit;
+            }
+
         } else {
             echo "<script>
             alert('Пароль неверный');

@@ -1,3 +1,11 @@
+
+
+
+
+
+
+
+
 // Находим все элементы с классом "animIt"
 const animElements = document.querySelectorAll('.animIt');
 
